@@ -1,12 +1,10 @@
 # _*_ coding: utf-8 _*_
-__author__ = 'mtianyan'
-__date__ = '2017/8/26 17:07'
+__author__ = 'zhj'
+__date__ = '2018/3/16 17:07'
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField
+from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField, RadioField
 from wtforms.validators import DataRequired, Email, Regexp, EqualTo, ValidationError
 from app.models import User
-
-
 class RegistForm(FlaskForm):
     name = StringField(
         label="昵称",
@@ -233,4 +231,18 @@ class CommentForm(FlaskForm):
             "class": "btn btn-success",
             "id": "btn-sub"
         }
+    )
+
+class HouseForm(FlaskForm):
+    worklocation = TextAreaField(
+        label="请选择工作地点",
+        render_kw={
+        "id": "work-location"
+        }
+    )
+    vehicleway = RadioField(
+        label="请选择通勤方式",
+        choices=[
+        ('SUBWAY,BUS', u'公交+地铁'), ('SUNWAY', u'公交')
+        ]
     )

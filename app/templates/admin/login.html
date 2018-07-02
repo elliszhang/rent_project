@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>后台 | mtianyan微电影</title>
+    <title>后台 | 地图搜房系统</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="shortcut icon" href="{{ url_for('static',filename='base/images/logo.png') }}">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='base/img/logo.png') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='admin/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='fonts/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='ionicons/css/ionicons.min.css') }}">
@@ -15,7 +15,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href=""><b>mtianyan微电影后台</b></a>
+        <a href=""><b>地图搜房后台</b></a>
     </div>
     <div class="login-box-body">
         {% for msg in get_flashed_messages(category_filter=["err"]) %}
